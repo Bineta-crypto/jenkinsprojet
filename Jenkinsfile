@@ -4,7 +4,7 @@ node {
     def dockerImageTag = "devopsexample${env.BUILD_NUMBER}"
     
     stage('Clone Repo') {
-      git 'https://github.com/rhmanou/Jenkins-Test.git'
+      git 'https://github.com/Bineta-crypto/jenkinsprojet.git'
     }    
   
     stage('Build Project') {
@@ -12,7 +12,7 @@ node {
     }
     
     stage('Initialize Docker'){         
-	  def dockerHome = tool 'MyDocker'         
+	  def dockerHome = tool 'docker'         
 	  env.PATH = "${dockerHome}/bin:${env.PATH}"     
     }
     
